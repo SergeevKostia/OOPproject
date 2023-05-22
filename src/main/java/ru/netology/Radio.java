@@ -1,8 +1,12 @@
 package ru.netology;
 
 public class Radio {
-    public int currentRadioWave;
-    public int currentVolume;
+    public int maxWave = 9;
+    public int minWave = 0;
+    public int maxVolume = 100;
+    public int minVolume = 0;
+    public int currentRadioWave = minWave;
+    public int currentVolume = minVolume;
 
     public int getCurrentRadioWave() {
 
@@ -15,10 +19,10 @@ public class Radio {
     }
 
     public void setCurrentRadioWave(int currentRadioWave) {
-        if (currentRadioWave < 0) {
+        if (currentRadioWave < minWave) {
             return;
         }
-        if (currentRadioWave > 9) {
+        if (currentRadioWave > maxWave) {
             return;
         }
 
@@ -27,10 +31,10 @@ public class Radio {
 
     public void nextRadioWave() {
 
-        if (currentRadioWave != 9) {
+        if (currentRadioWave != maxWave) {
             currentRadioWave++;
         } else {
-            currentRadioWave = 0;
+            currentRadioWave = minWave;
         }
 
 
@@ -39,18 +43,18 @@ public class Radio {
 
     public void stepBackRadioWave() {
 
-        if (currentRadioWave != 0) {
+        if (currentRadioWave != minWave) {
             currentRadioWave--;
         } else {
-            currentRadioWave = 9;
+            currentRadioWave = maxWave;
         }
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume < 0) {
+        if (newCurrentVolume < minVolume) {
             return;
         }
-        if (newCurrentVolume > 10) {
+        if (newCurrentVolume > maxVolume) {
             return;
         }
         currentVolume = newCurrentVolume;
@@ -58,13 +62,13 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (currentVolume < 10) {
+        if (currentVolume < maxVolume) {
             currentVolume++;
         }
     }
 
     public void reduceVolume() {
-        if (currentVolume > 0) {
+        if (currentVolume > minVolume) {
             currentVolume--;
         }
     }
