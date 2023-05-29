@@ -1,8 +1,8 @@
 package ru.netology;
 
 public class Radio {
-    public int currentRadioWave;
-    public int currentVolume;
+    private int currentRadioWave;
+    private int currentVolume;
 
     public int getCurrentRadioWave() {
 
