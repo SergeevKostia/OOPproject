@@ -163,7 +163,7 @@ public class RadioTest {
         Radio stat = new Radio();
         stat.setCurrentVolume(0);
         stat.reduceVolume();
-        int expected = 9;
+        int expected = 0;
         int actual = stat.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
