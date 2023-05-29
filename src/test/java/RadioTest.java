@@ -74,7 +74,7 @@ public class RadioTest {
     public void switchBackLessThanMinRadioWave() {
         Radio stat = new Radio();
         stat.setCurrentRadioWave(-1);
-        int expected = stat.currentRadioWave;
+        int expected = 0;
         int actual = stat.getCurrentRadioWave();
 
         Assertions.assertEquals(expected, actual);
@@ -139,7 +139,7 @@ public class RadioTest {
         Radio stat = new Radio();
         stat.setCurrentVolume(10);
         stat.increaseVolume();
-        int expected = stat.currentVolume;
+        int expected = 10;
         int actual = stat.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -163,7 +163,7 @@ public class RadioTest {
         Radio stat = new Radio();
         stat.setCurrentVolume(0);
         stat.reduceVolume();
-        int expected = stat.currentVolume;
+        int expected = 9;
         int actual = stat.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
