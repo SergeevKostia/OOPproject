@@ -6,9 +6,9 @@ import ru.netology.Radio;
 public class RadioTest {
     @Test
     public void topAmountWave() {
-        Radio stat = new Radio(9);
-        stat.setCurrentRadioWave(6);
-        int expected = 6;
+        Radio stat = new Radio(20);
+        stat.setCurrentRadioWave(15);
+        int expected = 15;
         int actual = stat.getCurrentRadioWave();
         Assertions.assertEquals(expected, actual);
     }

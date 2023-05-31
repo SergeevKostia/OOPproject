@@ -14,7 +14,7 @@ public class Radio {
 
     public Radio(int amountWave) {
         this.maxWave = amountWave -1;
-        this.minWave = 0;
+        this.minWave =0;
 
     }
 
