@@ -4,6 +4,14 @@ import org.junit.jupiter.api.Test;
 import ru.netology.Radio;
 
 public class RadioTest {
+    @Test
+    public void topAmountWave() {
+        Radio stat = new Radio(9);
+        stat.setCurrentRadioWave(6);
+        int expected = 6;
+        int actual = stat.getCurrentRadioWave();
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void shouldSetRadioWave() {

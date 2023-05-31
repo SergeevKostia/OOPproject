@@ -8,6 +8,14 @@ public class Radio {
     public int currentRadioWave = minWave;
     public int currentVolume = minVolume;
 
+    public Radio() {
+
+    }
+
+    public Radio(int amountWave) {
+
+    }
+
     public int getCurrentRadioWave() {
 
         return currentRadioWave;
